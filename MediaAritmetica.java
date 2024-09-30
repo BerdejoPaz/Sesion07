@@ -14,7 +14,7 @@ public class MediaAritmetica {
     public static void main(String[] args) {
         Scanner lectura = new Scanner(System.in);
         int suma = 0, contador = 0;
-        char continuar;
+        String continuar;
         double media =0;
         do {
             System.out.print("Introduce un numero: ");
@@ -22,13 +22,10 @@ public class MediaAritmetica {
             suma += num;
             contador++;
              System.out.print("¿Quieres ingresar otro numero? (s/n): ");
-            continuar = lectura.next().charAt(0);
-        } while (continuar == 's' || continuar == 'S');
+            continuar = lectura.next();
+        } while (continuar.equals("s")|| continuar.equals("S") );
         
         media = (double) suma / contador;
         System.out.println("La media de los números ingresados es: " + media);
     }
 }
-        
-    
-    
