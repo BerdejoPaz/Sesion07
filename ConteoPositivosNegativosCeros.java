@@ -18,7 +18,7 @@ public class ConteoPositivosNegativosCeros {
     public static void main(String[] args) {
         Scanner lectura = new Scanner(System.in);
         int positivos = 0, negativos = 0, ceros = 0;
-        char continuar;
+        String continuar;
         int num;
 
         do {
@@ -34,13 +34,11 @@ public class ConteoPositivosNegativosCeros {
             }
 
             System.out.print("¿Quieres ingresar otro número? (s/n): ");
-            continuar = lectura.next().charAt(0);
-        } while (continuar == 's' || continuar == 'S');
+            continuar = lectura.next();
+        } while (continuar.equals("s")|| continuar.equals("S") );
 
         System.out.println("Cantidad de numeros Positivos: " + positivos);
         System.out.println("Cantidad de numeros Negativos: " + negativos);
         System.out.println("Cantidad de numeros Ceros: " + ceros);
     }
 }
-    
-
